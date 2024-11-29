@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technical Documentation: HTML Basics</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav id="navbar">
+    <header>HTML Documentation</header>
+    <a class="nav-link" href="#Introduction">Introduction</a>
+    <a class="nav-link" href="#HTML_Basics">HTML Basics</a>
+    <a class="nav-link" href="#HTML_Tags">HTML Tags</a>
+    <a class="nav-link" href="#Forms_and_Inputs">Forms and Inputs</a>
+    <a class="nav-link" href="#Best_Practices">Best Practices</a>
+  </nav>
+
+  <!-- Main Documentation -->
+  <main id="main-doc">
+    <!-- Section 1 -->
+    <section id="Introduction" class="main-section">
+      <header>Introduction</header>
+      <p>HTML, or HyperText Markup Language, is the core building block of the web. It structures and formats content for websites.</p>
+      <p>The language is based on "tags," which define elements like paragraphs, links, headings, and more.</p>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="HTML_Basics" class="main-section">
+      <header>HTML Basics</header>
+      <p>Every HTML document begins with a doctype declaration to tell browsers it’s an HTML5 document:</p>
+      <code>&lt;!DOCTYPE html&gt;</code>
+      <p>Then it includes the following key elements:</p>
+      <ul>
+        <li>&lt;html&gt;: Root element</li>
+        <li>&lt;head&gt;: Metadata for the document</li>
+        <li>&lt;body&gt;: Content visible to the user</li>
+      </ul>
+      <p>An example of a basic HTML document:</p>
+      <code>
+        &lt;html&gt;<br>
+        &lt;head&gt;&lt;/head&gt;<br>
+        &lt;body&gt;&lt;/body&gt;<br>
+        &lt;/html&gt;
+      </code>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="HTML_Tags" class="main-section">
+      <header>HTML Tags</header>
+      <p>Tags are used to define elements in HTML. They usually come in pairs:</p>
+      <code>&lt;p&gt;This is a paragraph&lt;/p&gt;</code>
+      <p>Tags can also have attributes that provide additional information, such as:</p>
+      <code>&lt;a href="https://example.com"&gt;Click Here&lt;/a&gt;</code>
+      <p>Common HTML tags include:</p>
+      <ul>
+        <li>&lt;h1&gt; to &lt;h6&gt;: Headings</li>
+        <li>&lt;p&gt;: Paragraph</li>
+        <li>&lt;img&gt;: Images</li>
+      </ul>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="Forms_and_Inputs" class="main-section">
+      <header>Forms and Inputs</header>
+      <p>Forms are essential for gathering user input. The key form-related tags are:</p>
+      <ul>
+        <li>&lt;form&gt;: Defines a form</li>
+        <li>&lt;input&gt;: Input fields</li>
+        <li>&lt;button&gt;: Buttons for submitting data</li>
+      </ul>
+      <p>Here’s an example form:</p>
+      <code>
+        &lt;form&gt;<br>
+        &lt;input type="text"&gt;<br>
+        &lt;button&gt;Submit&lt;/button&gt;<br>
+        &lt;/form&gt;
+      </code>
+      <p>Forms can include other input types like:</p>
+      <ul>
+        <li>&lt;textarea&gt;: Multiline text input</li>
+        <li>&lt;select&gt;: Dropdown menus</li>
+      </ul>
+    </section>
+
+    <!-- Section 5 -->
+    <section id="Best_Practices" class="main-section">
+      <header>Best Practices</header>
+      <p>Clean, semantic HTML improves accessibility and readability. Key practices include:</p>
+      <ul>
+        <li>Use descriptive tags like &lt;header&gt;, &lt;footer&gt;, and &lt;article&gt;.</li>
+        <li>Keep your code well-indented and organized.</li>
+        <li>Use meaningful attribute values, like <code>alt</code> for images.</li>
+      </ul>
+      <p>Consider this example:</p>
+      <code>
+        &lt;img src="image.jpg" alt="Description of the image"&gt;
+      </code>
+      <p>Good semantic HTML ensures websites are both user-friendly and machine-readable.</p>
+    </section>
+  </main>
+</body>
+</html>
