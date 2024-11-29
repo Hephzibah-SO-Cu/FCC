@@ -1,60 +1,161 @@
-<!DOCTYPE html>
-<html lang="en">
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Midas Corp - Fintech</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+/* Body */
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
 
-<body>
-  <!-- Header Section -->
-  <header id="header">
-    <img id="header-img" src="https://www.midascorp.com/logo.png" alt="Midas Corp Logo">
-    <nav id="nav-bar">
-      <a href="#section1" class="nav-link">How It Works</a>
-      <a href="#section2" class="nav-link">Subscribe</a>
-      <a href="#section3" class="nav-link">About Us</a>
-    </nav>
-  </header>
+/* Header */
+header {
+  background-color: #1A1A1D;
+  color: white;
+  padding: 30px 10%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-  <!-- Section 1: Product Video -->
-  <section id="section1">
-    <div class="section-content">
-      <h2>Transforming Finance with Midas Technology</h2>
-      <div class="video-container">
-        <iframe id="video" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </div>
-    </div>
-  </section>
+#header-img {
+  width: 120px;
+}
 
-  <!-- Section 2: Subscribe -->
-  <section id="section2">
-    <div class="section-content">
-      <h2>Stay Updated with Midas</h2>
-      <p>Sign up for our newsletter and be the first to know about the latest updates in fintech innovation.</p>
-      <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
-        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
-        <input type="submit" id="submit" value="Subscribe Now">
-      </form>
-    </div>
-  </section>
+nav {
+  display: flex;
+  gap: 30px;
+}
 
-  <!-- Section 3: About Us -->
-  <section id="section3">
-    <div class="section-content">
-      <h2>About Midas Corp</h2>
-      <div class="about-img">
-        <img src="https://via.placeholder.com/600x300?text=Fintech+Innovation+Image" alt="Midas Corp Team">
-      </div>
-      <p>Founded with the vision of revolutionizing the financial services industry, Midas Corp leverages cutting-edge technology to offer seamless solutions for both individuals and businesses. With Midas, your financial future is golden.</p>
-    </div>
-  </section>
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
 
-  <footer>
-    <p>© 2024 Midas Corp | All Rights Reserved</p>
-  </footer>
-</body>
+.nav-link:hover {
+  color: #FFD700; /* Midas Gold */
+}
 
-</html>
+/* Section Styling */
+section {
+  padding: 60px 10%;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Section 1: Video Container */
+.video-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+iframe {
+  width: 100%;
+  height: 500px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* Section 2: Subscribe Form */
+form {
+  margin-top: 30px;
+}
+
+input[type="email"] {
+  padding: 15px;
+  width: 400px;
+  margin-right: 10px;
+  border-radius: 30px;
+  border: 2px solid #ccc;
+  font-size: 1.1em;
+}
+
+input[type="submit"] {
+  padding: 15px 30px;
+  background-color: #FFD700;
+  border: none;
+  color: white;
+  font-size: 1.1em;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #e5c100;
+}
+
+/* Section 3: About Us */
+.about-img img {
+  width: 100%;
+  max-width: 800px;
+  border-radius: 10px;
+  margin-top: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  font-size: 1.2em;
+  margin-top: 20px;
+  color: #666;
+}
+
+/* Footer */
+footer {
+  background-color: #1A1A1D;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 1em;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 10%;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  iframe {
+    height: 300px;
+  }
+
+  input[type="email"], input[type="submit"] {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
